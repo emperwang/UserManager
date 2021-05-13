@@ -1,4 +1,4 @@
-package com.hsbc.wk;
+package com.test.wk;
 
 import org.springframework.boot.Banner;
 import org.springframework.boot.SpringApplication;

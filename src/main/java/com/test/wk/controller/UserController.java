@@ -1,12 +1,11 @@
-package com.hsbc.wk.controller;
+package com.test.wk.controller;
 
 import com.alibaba.fastjson.JSONObject;
-import com.hsbc.wk.entity.Role;
-import com.hsbc.wk.entity.User;
-import com.hsbc.wk.service.UserService;
-import com.hsbc.wk.utils.EncryptUtil;
-import com.hsbc.wk.utils.JSONUtil;
-import com.hsbc.wk.utils.ResponseUtil;
+import com.test.wk.entity.Role;
+import com.test.wk.entity.User;
+import com.test.wk.service.UserService;
+import com.test.wk.utils.EncryptUtil;
+import com.test.wk.utils.ResponseUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

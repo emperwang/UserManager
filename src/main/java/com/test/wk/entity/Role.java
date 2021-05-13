@@ -1,4 +1,4 @@
-package com.hsbc.wk.entity;
+package com.test.wk.entity;
 
 
 import java.util.Objects;

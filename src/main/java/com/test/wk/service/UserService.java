@@ -1,8 +1,8 @@
-package com.hsbc.wk.service;
+package com.test.wk.service;
 
 
-import com.hsbc.wk.entity.Role;
-import com.hsbc.wk.entity.User;
+import com.test.wk.entity.Role;
+import com.test.wk.entity.User;
 
 import java.io.UnsupportedEncodingException;
 

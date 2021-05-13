@@ -1,4 +1,4 @@
-package com.hsbc.wk.utils;
+package com.test.wk.utils;
 
 
 import org.slf4j.Logger;

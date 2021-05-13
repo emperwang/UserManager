@@ -1,7 +1,7 @@
-package com.hsbc.wk.entity;
+package com.test.wk.entity;
 
 
-import com.hsbc.wk.utils.EncryptUtil;
+import com.test.wk.utils.EncryptUtil;
 
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;

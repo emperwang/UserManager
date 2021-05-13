@@ -1,9 +1,9 @@
-package com.hsbc.wk.service;
+package com.test.wk.service;
 
-import com.hsbc.wk.common.Common;
-import com.hsbc.wk.entity.Role;
-import com.hsbc.wk.entity.User;
-import com.hsbc.wk.utils.EncryptUtil;
+import com.test.wk.common.Common;
+import com.test.wk.entity.Role;
+import com.test.wk.entity.User;
+import com.test.wk.utils.EncryptUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;

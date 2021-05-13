@@ -1,4 +1,4 @@
-package com.hsbc.wk.utils;
+package com.test.wk.utils;
 
 import java.io.UnsupportedEncodingException;
 import java.nio.charset.Charset;

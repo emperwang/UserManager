@@ -1,4 +1,4 @@
-package com.test.wk.utils;
+package com.test.wk.util;
 
 
 public class ExUtil {

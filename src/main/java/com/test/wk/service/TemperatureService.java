@@ -53,7 +53,7 @@ public class TemperatureService {
         if (StringUtils.isEmpty(provinceCode)){
             throw new TemperaturaException("couldn't find city code");
         }
-        if (counties != null && !counties.isEmpty() && (counties.get("code").equalsIgnoreCase("200") || counties.get("code").equalsIgnoreCase("201"))){
+        if (counties != null && !counties.isEmpty() && ("200".equalsIgnoreCase(counties.get("code")) || "201".equalsIgnoreCase(counties.get("code")))){
             String msg = counties.get("message");
             JSONObject jsonObject = JSONObject.parseObject(msg);
             String countyCode = "";
@@ -94,7 +94,7 @@ public class TemperatureService {
     public Map<String, String> getCity(String province){
         Map<String, String> provinces = getProvince();
         Map<String, String> result = new HashMap<>();
-        if (provinces != null && !provinces.isEmpty() && (provinces.get("code").equalsIgnoreCase("200") || provinces.get("code").equalsIgnoreCase("201"))){
+        if (provinces != null && !provinces.isEmpty() && ("200".equalsIgnoreCase(provinces.get("code")) || "201".equalsIgnoreCase(provinces.get("code")))){
             String msg = provinces.get("message");
             JSONObject jsonObject = JSONObject.parseObject(msg);
             String provCode = "";
@@ -126,7 +126,7 @@ public class TemperatureService {
         if (StringUtils.isEmpty(provinceCode)){
             return configResult("500","couldn't find province code.");
         }
-        if (cities != null && !cities.isEmpty() && (cities.get("code").equalsIgnoreCase("200") || cities.get("code").equalsIgnoreCase("201"))){
+        if (cities != null && !cities.isEmpty() && ("200".equalsIgnoreCase(cities.get("code")) || "201".equalsIgnoreCase(cities.get("code")))){
             String msg = cities.get("message");
             JSONObject jsonObject = JSONObject.parseObject(msg);
             String cityCode = "";
@@ -174,7 +174,7 @@ public class TemperatureService {
         } catch (Exception e){
             log.info("query msg exception : {}", e.getMessage());
             for (int i = 0; i < 3; i++){
-                backOff(i * 5);
+                backOff((i +1)* 5);
                 try {
                     result = HttpClientUtil.httpGetMethodWithStatusCode(httpConfig);
                 } catch (Exception ex) {

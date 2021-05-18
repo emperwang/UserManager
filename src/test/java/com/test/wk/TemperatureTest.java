@@ -3,9 +3,11 @@ package com.test.wk;
 
 import com.test.wk.service.TemperatureService;
 import lombok.extern.slf4j.Slf4j;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.Map;
 import java.util.Optional;
 
 // function test
@@ -21,23 +23,27 @@ public class TemperatureTest {
 
     @Test
     public void testRetry(){
-        service.queryMsg("http://127.9.0.1/data/sk/10119040111111.html");
+        Map<String, String> result = service.queryMsg("http://127.9.0.1/data/sk/10119040111111.html");
+        Assert.assertEquals(null,result.get("code"));
     }
 
     @Test
     public void funcProvince(){
-        service.getProvince();
+        Map<String, String> province = service.getProvince();
+        Assert.assertEquals("200",province.get("code"));
     }
 
     @Test
     public void funcCity(){
-        service.getCity("江苏");
+        Map<String, String> res = service.getCity("江苏");
+        Assert.assertEquals("200", res.get("code"));
     }
 
 
     @Test
     public void funcCounty(){
-        service.getCounty("江苏","南京");
+        Map<String, String> res = service.getCounty("江苏", "南京");
+        Assert.assertEquals("200", res.get("code"));
     }
 
     @Test

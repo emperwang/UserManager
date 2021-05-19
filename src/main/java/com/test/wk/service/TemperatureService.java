@@ -177,6 +177,9 @@ public class TemperatureService {
                 backOff((i +1)* 5);
                 try {
                     result = HttpClientUtil.httpGetMethodWithStatusCode(httpConfig);
+                    if ("200".equalsIgnoreCase(result.get("code")) || "201".equalsIgnoreCase(result.get("code"))){
+                        return result;
+                    }
                 } catch (Exception ex) {
                     log.info("Error msg: {} ", e.getMessage());
                 }
